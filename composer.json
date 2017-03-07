@@ -1,0 +1,25 @@
+{
+    "name": "tasoft/key-value-coding",
+    "description": "PHP library to enable key-value coding for your objects.",
+    "homepage": "https://github.com/TASoftApplications/key-value-coding",
+    "type": "library",
+    "keywords": ["key","value", "coding", "tracing"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas Abplanalp",
+            "email": "info@tasoft.ch",
+            "homepage": "https://www.tasoft.ch/projects",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^5.3.3 || ^7.0",
+    }
+    
+    "autoload": {
+        "psr-4": {
+            "TASoft\\KVC\\": "src/"
+        }
+    }
+}
