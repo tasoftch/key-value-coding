@@ -4,4 +4,5 @@ This library defined 3 interfaces to enable key-value coding, key-value changing
 The key-value-coding library ships with 2 traits that implement the coding and changing interfaces.
 
 # Usage
-Every object that has a method named get* and set* 
+Every object that has methods named get* and set* can be used for key-value coding. the Object\CodingTrait implements the default mechanism which has the following workflow:<br>
+Getting a key: echo $object->userName;
