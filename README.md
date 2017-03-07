@@ -3,7 +3,7 @@ PHP Library to implement key-value coding
 This library defined 3 interfaces to enable key-value coding, key-value changing and key-value observing. Key-value coding is known as accessing properties, such as attributes or relationships of an object via keys.
 The key-value-coding library ships with 2 traits that implement the coding and changing interfaces.
 
-# Usage
+## Usage
 Every object that has methods named get* and set* can be used for key-value coding. The Object\CodingTrait implements the default mechanism which has the following workflow:<br>
 Getting a key:
 ```
@@ -24,3 +24,11 @@ and the same for
 $object->userName = "tasoft";
 ```
 but using the \__set, setValueForKey, setUserName or setValueForUndefinedKey instead.
+
+### Key Paths
+Keypaths are defined as identifier to trace objects by its relationships. For example, an address object contains an attribute named country and a user contains a relationship to an address object, you can access the country attribute by using
+```
+echo $user->valueForKeyPath("address.country");
+// or
+echo $user["address.country"];
+```
