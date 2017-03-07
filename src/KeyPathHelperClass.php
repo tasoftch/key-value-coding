@@ -13,28 +13,28 @@ namespace TASoft\KVC;
 */
 class KeyPathHelperClass {
 	
-	/**
-	Reads a keyPath and extract the final key and the path to that object.
-	For example a keypath of "customer.address.country" will be resolved to an array of
-	["customer", "address"] and a key named "country".
-	@param keyPath string
-	@param key string* The final key
-	@return array
-	*/
+/**
+*	Reads a keyPath and extract the final key and the path to that object.
+*	For example a keypath of "customer.address.country" will be resolved to an array of
+*	["customer", "address"] and a key named "country".
+*	@param keyPath string
+*	@param key string* The final key
+*	@return array
+*/
 	public static function parseKeyPath($keyPath, &$key=NULL) {
 		$kp = explode(".", $keyPath);
 		$key = array_pop($kp);
 		return $kp;
 	}
 	
-	/**
-	Traces from a given object by applying a keypath to the target object, extracting the final key as well.
-	It does not return the key value itself. Only the last object in the chain.
-	@param keyPath string The keypath
-	@param object object An object to trace
-	@param key string* the final key
-	@return object
-	*/
+/**
+*	Traces from a given object by applying a keypath to the target object, extracting the final key as well.
+*	It does not return the key value itself. Only the last object in the chain.
+*	@param keyPath string The keypath
+*	@param object object An object to trace
+*	@param key string* the final key
+*	@return object
+*/
 	public static function traceKeyPathWithObject(
 		$keyPath,
 		$object,
