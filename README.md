@@ -17,4 +17,10 @@ $object->getDefinedKeys();
 // If key does exist
 $object->getUserName();
 // If key does not exist
-$object->valueForUndefinedKey("userName");```
+$object->valueForUndefinedKey("userName");
+```
+and the same for
+```
+$object->userName = "tasoft";
+```
+but using the \__set, setValueForKey, setUserName or setValueForUndefinedKey instead.
