@@ -16,45 +16,45 @@ namespace TASoft\KVC\Object;
 *	access: $this->customer->address->zip via the key-value coding mechanism.
 */
 interface CodingInterface {
-	/**
-	Provide value for key
-	@param aKey string
-	@return mixed
-	*/
+/**
+*	Provide value for key
+*	@param aKey string
+*	@return mixed
+*/
 	public function valueForKey($aKey);
 	
-	/**
-	Provide a value for keypath
-	@param keyPath string
-	@return mixed
-	*/
+/**
+*	Provide a value for keypath
+*	@param keyPath string
+*	@return mixed
+*/
 	public function valueForKeyPath($keyPath);
 	
-	/**
-	Provide a default value, if an undefined key is requested
-	@param key string
-	@return mixed
-	*/
+/**
+*	Provide a default value, if an undefined key is requested
+*	@param key string
+*	@return mixed
+*/
 	public function valueForUndefinedKey($key);
 	
-	/**
-	Set value for key
-	@param aKey string
-	@param value mixed
-	*/
+/**
+*	Set value for key
+*	@param aKey string
+*	@param value mixed
+*/
 	public function setValueForKey($value, $aKey);
 	
-	/**
-	Set value for a keypath
-	@param keyPath string
-	@param value mixed
-	*/
+/**
+*	Set value for a keypath
+*	@param keyPath string
+*	@param value mixed
+*/
 	public function setValueForKeyPath($value, $keyPath);
 	
-	/**
-	Set value for an undefined key
-	@param key string
-	@param value mixed
-	*/
+/**
+*	Set value for an undefined key
+*	@param key string
+*	@param value mixed
+*/
 	public function setValueForUndefinedKey($value, $key);
 }
